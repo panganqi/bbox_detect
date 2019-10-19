@@ -34,7 +34,7 @@ class PascalVOCDataset(Dataset):
     def __getitem__(self, i):
         # Read image
         item_i = self.json_file[i]
-        image = Image.open(self.data_folder+'images'+item_i['image'], mode='r')
+        image = Image.open(self.data_folder+'/images/'+item_i['image'], mode='r')
         image = image.convert('RGB')
 
         # Read objects in this image (bounding boxes, labels, difficulties)
